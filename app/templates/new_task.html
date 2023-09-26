@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tasks</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='image/icone.jpg')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/new_task.css')}}">
+</head>
+<body>
+	<header>
+		<ul>
+			<li><a href="/"><strong>TASKS</strong></a></li>
+			<li style="float:right; top: 10px;"><a href="http://instagram.com/v.ii.n.i/" target="_blank"><img src="{{url_for('static',filename='image/instagram.png')}}"></a></li>
+			<li style="float:right; top: 10px;"><a href="http://github.com/vii-ni/" target="_blank"><img src="{{url_for('static',filename='image/github.png')}}"></a></li>
+		</ul>
+	</header>
+
+	<main>
+
+		<p id="exists_task"></p>
+
+		<div class="new_task">
+			<a href="/">X</a>
+			<form action="/new_task" method="POST">
+				<label for="name">nome</label> <br>
+				<input id="name" type="text" name="name_task" required wrap="hard" autocomplete="off"> <br>
+				<label for="date">data</label> <br>
+				<input id="date" type="date" name="date"> <br>
+				<label for="task">descrição</label> <br>
+				<input id="task" type="text" name="task" autocomplete="off"> <br>
+				<button>>></button>
+			</form>
+		</div>
+	</main>
+</body>
+<script type="text/javascript">
+	const msg = {{msg|tojson}};
+
+	var resp = document.querySelector('#exists_task');
+
+	(msg == "") ? {} : resp.innerHTML = msg;
+</script>
+</html>

@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*CABEÇALHO*/
+
+header{
+	width: 100%;
+	height: 40px;
+	background-color: rgb(56, 204, 204);
+	margin-bottom: 30px;
+	border-bottom: 3px solid black;
+}
+header li{
+	position: relative;
+	float: left;
+	top: 12px;
+	padding: 0px 10px 0px 10px;
+	list-style: none;
+}
+header a{
+	text-decoration: none;
+	color: black;
+}
+header img{
+	width: 20px;
+	height: 20px;
+}
+
+/*MAIN*/
+
+#exists_task{
+	color: darkred;
+	margin:-10px 0px 5px 0px;
+}
+
+.new_task{
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+}
+
+.new_task a{
+	position: absolute;
+	text-decoration: none;
+	height: 20px;
+	width: 25px;
+	padding-top: 5px;
+	top: -15px;
+	left: 18px;
+	color: white;
+	background-color: violet;
+	border-radius: 20px;
+	font-size: 13px;
+}
+
+.new_task form{
+	position: relative;
+	display: inline-block;
+	width: 230px;
+	height: 200px;
+	border: 4px dotted violet;
+	border-radius: 10px;
+	padding-top: 10px;
+}
+
+.new_task form label{
+	position: relative;
+	float: left;
+	left: 20px;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.new_task form input{
+	padding: 10px;
+}
+
+.new_task form input#name{
+	border: none;
+	background-color: blueviolet;
+	border-radius: 5px;
+}
+
+.new_task form input#date{
+	position: relative;
+	padding: 2px 37px;
+	border: 1.5px solid gray;
+	border-radius: 5px;
+}
+
+.new_task form input#task{
+	border: 1.5px solid gray;
+	border-radius: 5px;
+	word-break: break-word;
+}
+
+.new_task button{
+	position: relative;
+	top: 10px;
+	right: 15px;
+	float: right;
+	border: none;
+	background-color: transparent;
+	color: green;
+}

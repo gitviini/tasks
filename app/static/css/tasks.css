@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*CABEÇALHO*/
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(56, 204, 204);
+    margin-bottom: 10px;
+    z-index: 1;
+    border-bottom: 3px solid black;
+}
+header li{
+    position: relative;
+    float: left;
+    top: 12px;
+    padding: 0px 10px 0px 10px;
+    list-style: none;
+}
+
+header #delete_banco{
+    border: none;
+    background-color: transparent;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+header img{
+    width: 20px;
+    height: 20px;
+}
+
+/*MAIN*/
+
+#new_task{
+    margin-top: 60px;
+    position: relative;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 4px;
+    border-bottom: 9px solid black;
+    width: 280px;
+    height: 40px;
+    background-color: violet;
+    transition-delay: 0.035s;
+}
+
+#new_task:active{
+    margin-top: 65px ;
+    border:3px solid black;
+    border-bottom: 4px solid black;
+    background-color: darkviolet;
+    height: 35px;
+}
+
+main{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    max-width: 90%;
+}
+
+main #no_tasks{
+    color: darkred;
+}
+.space{
+    position: relative;
+    display: inline; 
+}
+
+.view_task{
+    position: relative;
+    display: block;
+    width: auto;
+    min-width: 90px;
+    max-width: 100px;
+    height: auto;
+    margin: 5px;
+    padding: 10px 5px;
+    padding-bottom: 20px;
+    text-align: justify;
+    border: 3px dotted violet;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+.view_task .date{
+    position: absolute;
+    top:-10px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: violet;
+    font-size: 12.5px;
+    font-style: italic;
+}
+
+.view_task .name_task{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: darkviolet;
+    font-size: 15px;
+    color: white;
+}
+
+.view_task .task{
+    margin-top: 10px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    word-break: break-word;
+    visibility: hidden;
+    position: absolute;
+}
+
+.view_task .check_box{
+    position: absolute;
+    padding: 2px;
+    margin-top: 10px;
+    right: -3px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1;
+}
+
+.space{
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    min-width: 110px;
+    height: auto;
+    min-height: 110px;
+}
+
+

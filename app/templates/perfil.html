@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    header{
+        display: block;
+        width: 100%;
+        height: 40px;
+        background-color: rgb(56, 204, 204);
+        border-bottom: 3px solid black;
+    }
+    header ul li{
+        position: relative;
+        float: left;
+        margin: 12px 10px 0 10px;
+    }
+    section{
+        position: relative;
+        display: block;
+        width: 50%;
+        margin: 3% auto;
+        border: 2px solid #888;
+        padding: 20px 0px 30% 20px;
+    }
+    #image{
+        position: relative;
+        display: block;
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: cadetblue;
+        margin: 0px 0px 20px 0px;
+        border-radius: 50%;
+    }
+    #buttons{
+        position: relative;
+        display: block;
+        width: 60%;
+        float: right;
+    }    
+    button{
+        position: relative;
+        border: none;
+        background-color: cadetblue;
+        margin: auto;
+        padding: 10px;
+        width: 100px;
+        color: white;
+        border-radius: 18px;
+
+    }
+    button:active{
+        background-color: rgb(59, 99, 100);
+    }
+    #name{
+        text-transform: lowercase;
+        color: #555;
+    }
+    #name::before{
+        content: '@';
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/"><strong>TASKS</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div id="image"></div>
+        <div id="buttons"><button>seguir</button><button>contato</button><button>mensagem</button></div>
+    </section>
+</body>
+<script>
+    const space = document.querySelector('section')
+    //dados do usuário
+    const data_user = {{data_user|tojson}}
+    if (data_user == null){
+        space.innerHTML = '<h1 style="text-align:center;">usuário não encontrado</h1>'
+        space.style.color = '#822'
+        space.style.margin = '5% 0 0 0'
+        space.style.width = '100%'
+        space.style.border = 'none'
+    }else{
+        const name = document.createElement('p')
+        name.innerText = `${data_user[1]}`
+        name.setAttribute('id','name')
+        space.appendChild(name)
+    }
+</script>
+</html>

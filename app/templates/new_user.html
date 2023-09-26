@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tasks</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/default.css')}}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='image/icone.jpg')}}">
+</head>
+<body>
+	<header>
+        <nav>
+            <ul style="list-style: none;">
+                <li><a href="/"><strong>TASKS</strong></a></li>
+                <li style="float: right; top: 10px;"><a href="http://instagram.com/v.ii.n.i/" target="_blank"><img src="{{url_for('static',filename='image/instagram.png')}}" alt="instagram"></a></li>
+                <li style="float: right; top: 10px;"><a href="http://github.com/vii-ni/" target="_blank"><img src="{{url_for('static',filename='image/github.png')}}" alt="github"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+    	<form action="/new_user" method="post">
+	        <label for="cpf">cpf</label>
+	        <input type="text" name="cpf" required width="30">
+	        <label for="name">nome</label>
+	        <input type="text" name="name" required minlength="4">
+	        <label for="email">email</label>
+	        <input type="email" name="email" required minlength="7">
+	        <label for="cpf">senha</label>
+	        <input type="password" name="password" required minlength="8" width="20">
+	        <button>>></button>
+	    </form>
+    </section>
+    <p id="erro">{{msg}}</p>
+    <p>já é cadastrado? <a href="/login">entrar</a></p>
+</body>
+</html>
