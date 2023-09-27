@@ -83,20 +83,20 @@ header img{
 	padding: 10px;
 }
 
-.new_task form input#name{
+#name{
 	border: none;
 	background-color: blueviolet;
 	border-radius: 5px;
 }
 
-.new_task form input#date{
+#date{
 	position: relative;
 	padding: 2px 37px;
 	border: 1.5px solid gray;
 	border-radius: 5px;
 }
 
-.new_task form input#task{
+#task{
 	border: 1.5px solid gray;
 	border-radius: 5px;
 	word-break: break-word;
